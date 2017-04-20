@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Chips from './Chips.js';
 import {Tabs, Tab} from 'material-ui/Tabs';
@@ -7,38 +6,56 @@ import FontIcon from 'material-ui/FontIcon';
 import MapsPersonPin from 'material-ui/svg-icons/maps/person-pin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
+import Search from 'material-ui/svg-icons/action/search';
+import bluespy from './bluespy.png';
+import greenspy from './greenspy.png';
+import yellowspy from './yellowspy.png';
+import redspy from './redspy.png';
+import blackspy from './blackspy.png';
 
 injectTapEventPlugin();
 
 class App extends Component {
   render() {
     return (
-        <MuiThemeProvider>
-
-      <div className="App">
-        
+      <MuiThemeProvider>
+        <div className="App"> 
          <Tabs>
           <Tab
-            icon={<FontIcon className="material-icons">phone</FontIcon>}
-            label="RECENTS">
+            icon={<Search style={divStyle} />}
+            label="Blue Spy">
              <Chips/>
           </Tab>
           <Tab
-            icon={<FontIcon className="material-icons">favorite</FontIcon>}
-            label="FAVORITES">
+            icon={<Search />}
+            label="Red Spy">
             <Chips/>
-            </Tab>
+          </Tab>
           <Tab
-            icon={<MapsPersonPin />}
-            label="NEARBY">
+            icon={<Search />}
+            label="Green Spy">
             <Chips/>
-            </Tab>
-        </Tabs>
-      </div>
-        </MuiThemeProvider>
+          </Tab>
+          <Tab
+            icon={<Search />}
+            label="Black Spy">
+            <Chips/>
+          </Tab>
+          <Tab
+            icon={<Search />}
+            label="Yellow Spy">
+            <Chips/>
+          </Tab>
+         </Tabs>
+        </div>
+      </MuiThemeProvider>
 
     );
   }
 }
+
+    const divStyle = {
+      color:"blue"
+    };
 
 export default App;

@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 
-injectTapEventPlugin();
 
 class Chip extends Component {
   constructor(props){
@@ -13,6 +11,7 @@ class Chip extends Component {
     this.setState({
          count: this.state.count - 1
       });
+    this.props.decrement();
   }
 
 
@@ -39,7 +38,7 @@ class Chip extends Component {
       <div>
       <div style={divStyle}>
         <button style={buttonStyle}> <img height="42" width="42" 
-        src={this.props.imageString} alt="my image" onClick={this.handleClick} /></button>
+        src={this.props.imageString} alt="my" onClick={this.handleClick} /></button>
         <h3 style={paragraphStyle}>x{this.state.count}</h3>
       </div>
       </div>);
