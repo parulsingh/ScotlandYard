@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://parulsingh.github.io/my-app",
+  "homepage": "https://parulsingh.github.io/ScotlandYard",
   "dependencies": {
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
